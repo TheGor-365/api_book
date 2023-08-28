@@ -3,19 +3,18 @@ class BooksController < ApplicationController
 
   def index
     @books = Book.all
-
-    respond_to do |format|
-      format.html do
-        redirect_to root_path, notice: "Here are the Books"
-      end
-
-      format.json do
-        render json: { notice: "Here are the Books" }
-      end
-    end
   end
 
   def show
+    # respond_to do |format|
+    #   format.html { redirect_to root_path }
+    #   format.json do
+    #     render json: @book.as_json(
+    #       root: true,
+    #       only: [:author]
+    #     )
+    #   end
+    # end
   end
 
   def new
